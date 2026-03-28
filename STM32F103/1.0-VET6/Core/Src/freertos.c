@@ -25,6 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
@@ -114,10 +115,12 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+  uint32_t tick = 0;
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    printf("FreeRTOS tick: %lu\r\n", (unsigned long)tick++);
+    osDelay(1000);
   }
   /* USER CODE END StartDefaultTask */
 }
@@ -126,4 +129,3 @@ void StartDefaultTask(void *argument)
 /* USER CODE BEGIN Application */
 
 /* USER CODE END Application */
-

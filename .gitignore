@@ -16,8 +16,8 @@ Listing/
 *.log
 # 其他临时文件
 *.uvoptx
-*.uvprojx
-
+*.uvguix.*
+.mxproject
 # =====================
 # VSCode 文件夹
 # =====================

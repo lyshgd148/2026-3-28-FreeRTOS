@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * File Name          : freertos.c
-  * Description        : Code for freertos applications
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * File Name          : freertos.c
+ * Description        : Code for freertos applications
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2026 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -77,7 +77,7 @@ const osSemaphoreAttr_t KeyBinary01_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-
+uint8_t flag=0;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -138,19 +138,19 @@ void MX_FREERTOS_Init(void) {
 
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
+ * @brief  Function implementing the defaultTask thread.
+ * @param  argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
   uint32_t tick = 0;
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
-    printf("FreeRTOS tick: %lu\r\n", (unsigned long)tick++);
+    // printf("FreeRTOS tick: %lu\r\n", (unsigned long)tick++);
     osDelay(1000);
   }
   /* USER CODE END StartDefaultTask */
@@ -158,35 +158,49 @@ void StartDefaultTask(void *argument)
 
 /* USER CODE BEGIN Header_LogTaskFunc */
 /**
-* @brief Function implementing the Log_Task thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the Log_Task thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_LogTaskFunc */
 void LogTaskFunc(void *argument)
 {
   /* USER CODE BEGIN LogTaskFunc */
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
-    osDelay(1);
+    if(osSemaphoreAcquire(KeyBinary01Handle,100)==osOK)
+    {
+      printf("Key Press!\r\n");
+    }
+    // if(flag==1)
+    // {
+    //   flag=0;
+    //   printf("Key Press!\r\n");
+    // }
+    osDelay(500);
   }
   /* USER CODE END LogTaskFunc */
 }
 
 /* USER CODE BEGIN Header_KeyTaskFunc */
 /**
-* @brief Function implementing the Key_Task thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the Key_Task thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_KeyTaskFunc */
 void KeyTaskFunc(void *argument)
 {
   /* USER CODE BEGIN KeyTaskFunc */
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
+    if (HAL_GPIO_ReadPin(Key1_GPIO_Port, Key1_Pin) == GPIO_PIN_RESET)
+    {
+      osSemaphoreRelease(KeyBinary01Handle);
+      // flag=1;
+    }
     osDelay(1);
   }
   /* USER CODE END KeyTaskFunc */

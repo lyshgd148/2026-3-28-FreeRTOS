@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"1.0_car\startup_stm32f103xb.o"
+"1.0_car\main.o"
+"1.0_car\gpio.o"
+"1.0_car\i2c.o"
+"1.0_car\stm32f1xx_it.o"
+"1.0_car\stm32f1xx_hal_msp.o"
+"1.0_car\stm32f1xx_hal_gpio_ex.o"
+"1.0_car\stm32f1xx_hal_i2c.o"
+"1.0_car\stm32f1xx_hal.o"
+"1.0_car\stm32f1xx_hal_rcc.o"
+"1.0_car\stm32f1xx_hal_rcc_ex.o"
+"1.0_car\stm32f1xx_hal_gpio.o"
+"1.0_car\stm32f1xx_hal_dma.o"
+"1.0_car\stm32f1xx_hal_cortex.o"
+"1.0_car\stm32f1xx_hal_pwr.o"
+"1.0_car\stm32f1xx_hal_flash.o"
+"1.0_car\stm32f1xx_hal_flash_ex.o"
+"1.0_car\stm32f1xx_hal_exti.o"
+"1.0_car\system_stm32f1xx.o"
+"1.0_car\oled.o"
+"1.0_car\delay.o"
+"1.0_car\myi2c.o"
+--library_type=microlib --strict --scatter "1.0_car\1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "1.map" -o 1.0_car\1.0_car

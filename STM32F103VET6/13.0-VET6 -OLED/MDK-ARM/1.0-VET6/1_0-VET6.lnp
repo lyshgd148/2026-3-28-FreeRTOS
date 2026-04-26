@@ -28,6 +28,7 @@
 "1.0-vet6\oled_data.o"
 "1.0-vet6\key.o"
 "1.0-vet6\led.o"
+"1.0-vet6\menu.o"
 --library_type=microlib --strict --scatter "1.0-VET6\1_0-VET6.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

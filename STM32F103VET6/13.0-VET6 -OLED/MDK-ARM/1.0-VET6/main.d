@@ -36,5 +36,5 @@
 1.0-vet6\main.o: ../Core/Inc/gpio.h
 1.0-vet6\main.o: ../Hardware/OLED.h
 1.0-vet6\main.o: ../Hardware/OLED_Data.h
-1.0-vet6\main.o: D:\Keil\ARM\ARMCC\Bin\..\include\math.h
 1.0-vet6\main.o: ../Hardware/KEY.h
+1.0-vet6\main.o: ..\User\menu.h

@@ -20,18 +20,14 @@ uint8_t menu1(void)
             flag++;
             flag_last = 1;
             if (flag > 8)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 8;
-            }
         }
         else if (Key_num == 3)
         {
@@ -122,18 +118,14 @@ uint8_t menu1_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {
@@ -211,18 +203,14 @@ uint8_t menu2_x(void)
         {
             flag++;
             if (flag > 1)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
 
             if (flag < 1)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 3)
         {
@@ -308,29 +296,17 @@ uint8_t menu3_x_x(uint8_t led1_state, uint8_t led2_state, uint8_t led3_state, ui
 
             OLED_ShowString(0, 8, "<--   ", OLED_6X8);
             if (led1_state == 1)
-            {
                 OLED_ShowString(0, 24, "LED1:ON", OLED_6X8);
-            }
             else
-            {
                 OLED_ShowString(0, 24, "LED1:OFF", OLED_6X8);
-            }
             if (led2_state == 1)
-            {
                 OLED_ShowString(0, 40, "LED2:ON", OLED_6X8);
-            }
             else
-            {
                 OLED_ShowString(0, 40, "LED2:OFF", OLED_6X8);
-            }
             if (led3_state == 1)
-            {
                 OLED_ShowString(0, 56, "LED3:ON", OLED_6X8);
-            }
             else
-            {
                 OLED_ShowString(0, 56, "LED3:OFF", OLED_6X8);
-            }
             OLED_ReverseArea(0, 24 + num_menu * 16, 64, 8);
             OLED_Update();
         }
@@ -369,18 +345,14 @@ uint8_t menu3_x(void)
             flag++;
             flag_last = 1;
             if (flag > 4)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 4;
-            }
         }
         else if (Key_num == 3)
         {
@@ -420,113 +392,65 @@ uint8_t menu3_x(void)
             case 1:
                 OLED_ShowString(0, 8, "<--   ", OLED_6X8);
                 if (led1_state == 1)
-                {
                     OLED_ShowString(0, 24, "LED1:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 24, "LED1:OFF", OLED_6X8);
-                }
                 if (led2_state == 1)
-                {
                     OLED_ShowString(0, 40, "LED2:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 40, "LED2:OFF", OLED_6X8);
-                }
                 if (led3_state == 1)
-                {
                     OLED_ShowString(0, 56, "LED3:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 56, "LED3:OFF", OLED_6X8);
-                }
                 OLED_ReverseArea(0, 8, 128, 8);
                 break;
             case 2:
                 OLED_ShowString(0, 8, "<--   ", OLED_6X8);
                 if (led1_state == 1)
-                {
                     OLED_ShowString(0, 24, "LED1:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 24, "LED1:OFF", OLED_6X8);
-                }
                 if (led2_state == 1)
-                {
                     OLED_ShowString(0, 40, "LED2:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 40, "LED2:OFF", OLED_6X8);
-                }
                 if (led3_state == 1)
-                {
                     OLED_ShowString(0, 56, "LED3:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 56, "LED3:OFF", OLED_6X8);
-                }
                 OLED_ReverseArea(0, 24, 128, 8);
                 break;
             case 3:
                 OLED_ShowString(0, 8, "<--   ", OLED_6X8);
                 if (led1_state == 1)
-                {
                     OLED_ShowString(0, 24, "LED1:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 24, "LED1:OFF", OLED_6X8);
-                }
                 if (led2_state == 1)
-                {
                     OLED_ShowString(0, 40, "LED2:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 40, "LED2:OFF", OLED_6X8);
-                }
                 if (led3_state == 1)
-                {
                     OLED_ShowString(0, 56, "LED3:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 56, "LED3:OFF", OLED_6X8);
-                }
                 OLED_ReverseArea(0, 40, 128, 8);
                 break;
             case 4:
                 OLED_ShowString(0, 8, "<--   ", OLED_6X8);
                 if (led1_state == 1)
-                {
                     OLED_ShowString(0, 24, "LED1:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 24, "LED1:OFF", OLED_6X8);
-                }
                 if (led2_state == 1)
-                {
                     OLED_ShowString(0, 40, "LED2:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 40, "LED2:OFF", OLED_6X8);
-                }
                 if (led3_state == 1)
-                {
                     OLED_ShowString(0, 56, "LED3:ON", OLED_6X8);
-                }
                 else
-                {
                     OLED_ShowString(0, 56, "LED3:OFF", OLED_6X8);
-                }
                 OLED_ReverseArea(0, 56, 128, 8);
                 break;
             }
@@ -549,18 +473,14 @@ uint8_t menu4_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {
@@ -638,18 +558,14 @@ uint8_t menu5_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {
@@ -727,18 +643,14 @@ uint8_t menu6_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {
@@ -816,18 +728,14 @@ uint8_t menu7_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {
@@ -905,18 +813,14 @@ uint8_t menu8_x(void)
             flag++;
             flag_last = 1;
             if (flag > 5)
-            {
                 flag = 1;
-            }
         }
         else if (Key_num == 2)
         {
             flag--;
             flag_last = 1;
             if (flag < 1)
-            {
                 flag = 5;
-            }
         }
         else if (Key_num == 3)
         {

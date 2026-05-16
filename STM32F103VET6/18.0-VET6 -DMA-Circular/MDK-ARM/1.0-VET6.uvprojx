@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Hardware</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Hardware;..\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -721,6 +721,21 @@
               <FileName>LED.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Hardware\LED.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>User</GroupName>
+          <Files>
+            <File>
+              <FileName>Circular.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Circular.c</FilePath>
+            </File>
+            <File>
+              <FileName>Circular.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\Circular.h</FilePath>
             </File>
           </Files>
         </Group>

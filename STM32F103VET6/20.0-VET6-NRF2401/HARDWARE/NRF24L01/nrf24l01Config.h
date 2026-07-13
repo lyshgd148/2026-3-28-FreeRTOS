@@ -42,4 +42,17 @@
 #define NRF24L01_W_TX_PAYLOAD_NO_ACK   0xB0  // 写TX负载无ACK
 #define NRF24L01_NOP                    0xFF  // NOP命令
 
+//===========模式定义===========
+typedef enum
+{
+    NRF24L01_MODE_TX = 0x01,          // 发送模式
+    NRF24L01_MODE_RX = 0x02,          // 接收模式
+    NRF24L01_MODE_STDBY_I = 0x03,     // 待机模式
+    NRF24L01_MODE_POWER_DOWN = 0x04   // 低功耗模式
+
+} NRF24L01_Mode_t;
+
+
+
+
 #endif

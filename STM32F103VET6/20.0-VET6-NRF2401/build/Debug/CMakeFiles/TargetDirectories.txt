@@ -1,0 +1,7 @@
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/CMakeFiles/20.0-VET6-NRF2401.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/CMakeFiles/flash.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/CMakeFiles/edit_cache.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/Lys/Desktop/Myproject/FreeRTOS/STM32F103VET6/20.0-VET6-NRF2401/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

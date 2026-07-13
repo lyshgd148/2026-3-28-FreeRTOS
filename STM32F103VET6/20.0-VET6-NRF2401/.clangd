@@ -1,0 +1,27 @@
+CompileFlags:
+  CompilationDatabase: build/Debug
+  Add:
+    - --target=armv7m-none-eabi
+    - -idirafter
+    - D:/ARM/arm-none-eabi/include
+    - -idirafter
+    - D:/ARM/lib/gcc/arm-none-eabi/15.2.1/include
+    - -idirafter
+    - D:/ARM/lib/gcc/arm-none-eabi/15.2.1/include-fixed
+    # - -I
+    # - ../../Core/Inc
+    # - -I
+    # - ../../Drivers/STM32F1xx_HAL_Driver/Inc
+    # - -I
+    # - ../../Drivers/CMSIS/Device/ST/STM32F1xx/Include
+    # - -I
+    # - ../../Drivers/CMSIS/Include
+    # - -I
+    # - ../../HARDWARE/NRF24L01
+  Remove:
+    - -mcpu=*
+    - -mthumb
+    - -fdata-sections
+    - -ffunction-sections
+    - -fstack-usage
+    - -specs=*
